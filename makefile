@@ -16,7 +16,7 @@ all: clean test sample
 test: $(SOURCE_DIR)test.cpp | make_dir
 	$(COMPILER)  $(LIBRARY_FLAGS) $(INC) $(SOURCE_DIR)test.cpp -o $(OUTPUT_DIR)/$(NAME).so.$(VERSION)
 sample: sample/sample.cpp | test 
-	$(COMPILER) $(FLAGS) $(INC) $(NAME).so.$(VERSION) sample/sample.cpp -o $(OUTPUT_DIR)/sample.out
+	$(COMPILER) $(FLAGS) $(INC) $(OUTPUT_DIR)/$(NAME).so.$(VERSION) sample/sample.cpp -o $(OUTPUT_DIR)/sample.out
 clean: make_dir
 	rm -f $(OUTPUT_DIR)/*.so && rm -f $(OUTPUT_DIR)/*.out && rm -f $(OUTPUT_DIR)/*.o
 make_dir:
