@@ -1,8 +1,6 @@
 # beta-core-test
 A C++11 Test Suite that aims to use native c++11 code with out the need for macros. Just extend the test class.
 
-
-
 ## Compilation
 gnu make file, cd to project folder and run `make`. 
 
